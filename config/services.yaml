@@ -1,0 +1,23 @@
+parameters:
+    locale: 'en'
+    user_class: 'App\Entity\User'
+    public_dir: '%kernel.project_dir%/public'
+
+services:
+    _defaults:
+        autowire: true      # Automatically injects dependencies in your services.
+        autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+        public: false       # Allows optimizing the container by removing unused services; this also means
+
+    App\:
+        resource: '../src/*'
+        exclude: '../src/{Entity,Migrations,Tests,Utils}'
+
+    App\Utils\:
+        public: true
+        resource: '../src/Utils/*'
+        # Example: exclude: '../src/Utils/{EntityHelper.php}'
+
+    App\Controller\:
+        resource: '../src/Controller'
+        tags: ['controller.service_arguments']

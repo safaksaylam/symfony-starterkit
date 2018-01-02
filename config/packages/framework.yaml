@@ -1,0 +1,15 @@
+framework:
+    secret: '%env(APP_SECRET)%'
+    translator: { fallbacks: ['%locale%'] }
+    form: ~
+    csrf_protection: ~
+    validation: { enable_annotations: true }
+    default_locale: '%locale%'
+    trusted_hosts: ~
+    session:
+        handler_id: session.handler.native_file
+        save_path: '%kernel.project_dir%/var/sessions/%kernel.environment%'
+    fragments: ~
+    http_method_override: true
+    php_errors:
+        log: true

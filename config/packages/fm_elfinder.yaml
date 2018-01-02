@@ -1,0 +1,15 @@
+fm_elfinder:
+    instances:
+        default:
+            locale: '%locale%'
+            editor: custom
+            editor_template: '@DPXAdmin/Default/elfinder-ckeditor.html.twig'
+            include_assets: true
+            connector:
+                roots:
+                    uploads:
+                        driver: LocalFileSystem
+                        path: uploads
+                        upload_allow: ['image/png', 'image/jpg', 'image/jpeg']
+                        upload_deny: ['all']
+                        upload_max_size: 2M
