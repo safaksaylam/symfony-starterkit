@@ -21,3 +21,19 @@ services:
     App\Controller\:
         resource: '../src/Controller'
         tags: ['controller.service_arguments']
+
+    # Handler
+    authentication_handler:
+        class: App\Handler\AuthHandler
+        autowire: true
+
+    # Security
+    login_form_authenticator:
+        class: App\Security\LoginFormAuthenticator
+        autowire: true
+
+    # Event Listener
+    App\EventListener\Doctrine\UserListener:
+        autowire: true
+        tags:
+            - { name: doctrine.orm.entity_listener }

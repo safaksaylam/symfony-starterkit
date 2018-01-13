@@ -12,4 +12,18 @@ security:
 
     firewalls:
         main:
+            pattern: .*
             anonymous: ~
+            context: primary_auth
+            provider: db_users
+            form_login:
+                login_path: login
+                check_path: login_check
+                success_handler: authentication_handler
+                failure_handler: authentication_handler
+            logout:
+                success_handler: authentication_handler
+                path: logout
+
+    access_control:
+        - { path: ^/admin, roles: ROLE_ADMIN }
