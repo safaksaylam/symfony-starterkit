@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Admin Panel">
+  <meta name="description" content="{{ 'admin.title'|trans }}">
   <meta name="author" content="Şafak Saylam">
-  <title>Admin Panel</title>
+  <title>{{ 'admin.title'|trans }}</title>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css">
   <style type="text/css">
@@ -56,7 +56,7 @@
 <div class="container">
 
   <form method="post" action="{{ path('login_check') }}" class="form-signin">
-    <h2 class="form-signin-heading">Please sign in</h2>
+    <h2 class="form-signin-heading">{{ 'admin.title'|trans }}</h2>
     {% if error %}
       <div class="alert alert-danger alert-dismissible" role="alert">
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -67,16 +67,16 @@
         {% endfor %}
       </div>
     {% endif %}
-    <label for="inputEmail" class="sr-only">Email address</label>
-    <input type="email" name="_username" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-    <label for="inputPassword" class="sr-only">Password</label>
-    <input type="password" name="_password" id="inputPassword" class="form-control" placeholder="Password" required>
+    <label for="inputEmail" class="sr-only">{{ 'admin.email'|trans }}</label>
+    <input type="email" name="_username" id="inputEmail" class="form-control" placeholder="{{ 'admin.email'|trans }}" required autofocus>
+    <label for="inputPassword" class="sr-only">{{ 'admin.password'|trans }}</label>
+    <input type="password" name="_password" id="inputPassword" class="form-control" placeholder="{{ 'admin.password'|trans }}" required>
     <div class="checkbox">
       <label>
-        <input type="checkbox" value="remember-me"> Remember me
+        <input type="checkbox" value="remember-me"> {{ 'admin.rememberMe'|trans }}
       </label>
     </div>
-    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">{{ 'admin.login'|trans }}</button>
   </form>
 
 </div> <!-- /container -->

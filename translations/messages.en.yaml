@@ -1,1 +1,10 @@
 # Admin bundle vs. translations
+auth_handler:
+    error_message: Username or password is wrong.
+
+admin:
+    title: Admin Panel
+    rememberMe: Remember me
+    login: Login
+    email: Email
+    password: Password
