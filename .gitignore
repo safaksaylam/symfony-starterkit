@@ -1,0 +1,18 @@
+
+###> symfony/framework-bundle ###
+.env
+/public/bundles/
+/var/
+/vendor/
+/public/assets/
+composer.lock
+###< symfony/framework-bundle ###
+###> symfony/phpunit-bridge ###
+.phpunit
+/phpunit.xml
+###< symfony/phpunit-bridge ###
+/.idea/
+/dpxdocker/
+/docker-*
+/start.sh
+/.docker-sync/
